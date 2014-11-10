@@ -30,13 +30,13 @@
 
 <hr>
 
-<ol>
-<li><a href="https://yingyun001.github.io/ZYQ/optaPlanner/index.html">optaPlanner</a></li>
-<li><a href="https://yingyun001.github.io/ZYQ/Reports/Separate-Reports-Host/index.html">Separate-Reports-Host</a></li>
-<li><a href="https://yingyun001.github.io/ZYQ/ovirt_optaplanner/index.html">oVirt optaPlanner</a></li>
-<li><a href="https://yingyun001.github.io/ZYQ/Reports/DateBase/index.html">DB</a></li>
-<li><a>AMAZING</a></li>
-</ol>
+<ul>
+　　{% for post in site.posts %}
+　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　{% endfor %}
+</ul>
+
+
       </section>
     </div>
 
