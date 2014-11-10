@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Yaqi.Zhang&#39;s Blog</title>
+		<description>amazing ovirt</description>		
+		<link>http://yingyun001.github.io/</link>
+		<atom:link href="http://yingyun001.github.io//feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>ovirt-optaPlanner</title>
+				<description>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;chrome=1&quot;&gt;
+&lt;title&gt;oVirt-OptaPlanner by yingyun001&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheets/styles.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheets/pygment_trac.css&quot;&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;javascripts/respond.js&quot;&gt;&lt;/script&gt;
+&lt;!--[if lt IE 9]&gt;
+&lt;script src=&quot;//html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;
+&lt;!--[if lt IE 8]&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheets/ie.css&quot;&gt;
+&lt;![endif]--&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, user-scalable=no&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;section&gt;
+&lt;div id=&quot;title&quot;&gt;
+&lt;h1&gt;oVirt-OptaPlanner&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;span class=&quot;credits left&quot;&gt;Project maintained by &lt;a href=&quot;https://github.com/yingyun001&quot;&gt;yingyun001&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;credits right&quot;&gt;Hosted on GitHub Pages &amp;mdash; Theme by &lt;a href=&quot;https://twitter.com/michigangraham&quot;&gt;mattgraham&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;h1&gt;
+&lt;a name=&quot;%E9%83%A8%E7%BD%B2optaplanner&quot; class=&quot;anchor&quot; href=&quot;#%E9%83%A8%E7%BD%B2optaplanner&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;部署OptaPlanner&lt;/h1&gt;
+&lt;h2&gt;
+&lt;a name=&quot;%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83&quot; class=&quot;anchor&quot; href=&quot;#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;测试环境：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;操作系统：CentOS6.5&lt;/li&gt;
+&lt;li&gt;oVirt 版本： 3.5&lt;/li&gt;
+&lt;li&gt;准备两台主机(虚拟机亦可)；&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;vm_266 作 ovirt-engine&lt;/li&gt;
+&lt;li&gt;vm_247 作 ovirt-optimizer服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ol&gt;
+&lt;h2&gt;
+&lt;a name=&quot;%E6%B5%8B%E8%AF%95&quot; class=&quot;anchor&quot; href=&quot;#%E6%B5%8B%E8%AF%95&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;测试：&lt;/h2&gt;
+&lt;h3&gt;
+&lt;a name=&quot;vm_226&quot; class=&quot;anchor&quot; href=&quot;#vm_226&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;vm_226:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;yum -y update&lt;/code&gt;&lt;/pre&gt;
+升级成功后，重启系统
+&lt;li&gt;配置oVirt3.5的yum源&lt;/li&gt;
+&lt;code&gt;&lt;pre&gt;yum -y install [http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm](http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm)&lt;/pre&gt;&lt;/code&gt;
+安装oVirt engine
+&lt;pre&gt;&lt;code&gt;yum -y install ovirt-engine&lt;/code&gt;&lt;/pre&gt;
+此命令将下载oVirt engine 安装软件包，并解决所有的依赖关系。
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;!--[if !IE]&gt;&lt;script&gt;fixScale(document);&lt;/script&gt;&lt;![endif]--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+				<pubDate>Mon, 10 Nov 2014 00:00:00 +0800</pubDate>
+				<link>http://yingyun001.github.io//2014/11/10/ovirt-optaPlanner.html</link>
+				<guid isPermaLink="true">http://yingyun001.github.io//2014/11/10/ovirt-optaPlanner.html</guid>
+			</item>
+		
+			<item>
+				<title>你好，世界</title>
+				<description>&lt;div id=&quot;header&quot;&gt;
+&lt;nav&gt;
+&lt;li class=&quot;fork&quot;&gt;&lt;a href=&quot;https://github.com/yingyun001&quot;&gt;View On GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;/nav&gt;
+&lt;/div&gt;&lt;!-- end header --&gt;
+&lt;div class=&quot;wrapper&quot;&gt;
+&lt;section&gt;
+&lt;div id=&quot;title&quot;&gt;
+&lt;h1&gt;oVirt-OptaPlanner&lt;/h1&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;span class=&quot;credits left&quot;&gt;Project maintained by &lt;a href=&quot;https://github.com/yingyun001&quot;&gt;yingyun001&lt;/a&gt;&lt;/span&gt;
+&lt;span class=&quot;credits right&quot;&gt;Hosted on GitHub Pages &amp;mdash; Theme by &lt;a href=&quot;https://twitter.com/michigangraham&quot;&gt;mattgraham&lt;/a&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;h1&gt;
+&lt;a name=&quot;%E9%83%A8%E7%BD%B2optaplanner&quot; class=&quot;anchor&quot; href=&quot;#%E9%83%A8%E7%BD%B2optaplanner&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;部署OptaPlanner&lt;/h1&gt;
+&lt;h2&gt;
+&lt;a name=&quot;%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83&quot; class=&quot;anchor&quot; href=&quot;#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;测试环境：&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;操作系统：CentOS6.5&lt;/li&gt;
+&lt;li&gt;oVirt 版本： 3.5&lt;/li&gt;
+&lt;li&gt;准备两台主机(虚拟机亦可)；&lt;/li&gt;
+&lt;ul&gt;
+&lt;li&gt;vm_266 作 ovirt-engine&lt;/li&gt;
+&lt;li&gt;vm_247 作 ovirt-optimizer服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/ol&gt;
+&lt;h2&gt;
+&lt;a name=&quot;%E6%B5%8B%E8%AF%95&quot; class=&quot;anchor&quot; href=&quot;#%E6%B5%8B%E8%AF%95&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;测试：&lt;/h2&gt;
+&lt;h3&gt;
+&lt;a name=&quot;vm_226&quot; class=&quot;anchor&quot; href=&quot;#vm_226&quot;&gt;&lt;span class=&quot;octicon octicon-link&quot;&gt;&lt;/span&gt;&lt;/a&gt;vm_226:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：&lt;/li&gt;
+&lt;pre&gt;&lt;code&gt;yum -y update&lt;/code&gt;&lt;/pre&gt;
+升级成功后，重启系统
+&lt;li&gt;配置oVirt3.5的yum源&lt;/li&gt;
+&lt;code&gt;&lt;pre&gt;yum -y install [http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm](http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm)&lt;/pre&gt;&lt;/code&gt;
+安装oVirt engine
+&lt;pre&gt;&lt;code&gt;yum -y install ovirt-engine&lt;/code&gt;&lt;/pre&gt;
+此命令将下载oVirt engine 安装软件包，并解决所有的依赖关系。
+&lt;/ol&gt;
+&lt;/section&gt;
+&lt;/div&gt;
+&lt;!--[if !IE]&gt;&lt;script&gt;fixScale(document);&lt;/script&gt;&lt;![endif]--&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+</description>
+				<pubDate>Sun, 09 Nov 2014 00:00:00 +0800</pubDate>
+				<link>http://yingyun001.github.io//2014/11/09/hello-world.html</link>
+				<guid isPermaLink="true">http://yingyun001.github.io//2014/11/09/hello-world.html</guid>
+			</item>
+		
+	</channel>
+</rss>
