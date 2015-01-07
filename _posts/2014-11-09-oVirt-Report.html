@@ -3,132 +3,837 @@ layout: none
 title: oVirt  Report
 ---
 <h2>{{ page.title }}</h2>
+
 <section id="main_content">
-    <h1>
-       <a name="%E6%B5%8B%E8%AF%95%E4%B8%80" class="anchor" href="#%E6%B5%8B%E8%AF%95%E4%B8%80"><span class="octicon octicon-link"></span></a>测试一：
-    </h1>
-    <h2>
-       <a name="%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83" class="anchor" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="octicon octicon-link"></span></a>测是环境：
-    </h2>
-    <div>Version : 3.5</div>
-    <p>engine，dwh，reports 分别运行在不同的机器上:</p>
-    <ul>
-       <li>vm_187 : 作 engine 机器</li>
-       <li>vm_188 : 作 dwh 机器</li>
-       <li>vm_189 : 作 reports 机器</li>
-    </ul>
-
-    <h2>
-       <a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="octicon octicon-link"></span></a>具体操作：
-    </h2>
-
-    <h3>
-       <a name="vm_187-" class="anchor" href="#vm_187-"><span class="octicon octicon-link"></span></a>vm_187 :
-    </h3>
-    <pre>
-       <code>
-          Host name : zhangyingyun187.eayunci
-       </code>
-    </pre>
-    <ol>
-       <li>yum -y update </li>
-       <li>yum -y install ????????</li>
-       <li>yum -y ovirt-engine</li>
-       <li>engine-setup</li>
-    </ol>
-    <h3>
-       <a name="vm_188-" class="anchor" href="#vm_188-"><span class="octicon octicon-link"></span></a>vm_188 :
-    </h3>
-    <pre>
-       <code>
-          Host name : zhangyingyun188.eayunci
-       </code>
-    </pre>
-    <ol>
-       <li>yum -y update </li>
-       <li>
-          yum -y install<a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a>
-       </li>
-       <li>yum -y ovirt-engine-dwh</li>
-       <li>engine-setup</li>
-       <li>由于需要手动获取到engine数据库的密码，所以要事先在 /etc/hosts中，不但要配置本机的域名还要配置zhangyingyun187.eayunci的域名解析。</li>
-       <li> </li>
-    </ol>
-    <h3>
-       <a name="vm_189-" class="anchor" href="#vm_189-"><span class="octicon octicon-link"></span></a>vm_189 : 
-    </h3>
-    <pre> 
-       <code>
-          Host name : zhangyingyun189.eayunci
-       </code>
-    </pre>
-    <ol>
-       <li>yum -y update </li>
-       <li>yum -y install
-          <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a>
-       </li>
-       <li>yum -y ovirt-engine-reports</li>
-       <li>engine-setup</li>
-       <li>由于需要手动获取到dwh数据库的密码，所以要事先在 /etc/hosts中，不但要配置本机的域名还要配置zhangyingyun188.eayunci的域名解析。</li>
-    </ol>
-    <hr>
-    <h1>
-       <a name="%E6%B5%8B%E8%AF%95%E4%BA%8C" class="anchor" href="#%E6%B5%8B%E8%AF%95%E4%BA%8C"><span class="octicon octicon-link"></span></a>Զ
-    </h1>
-    <h2>
-       <a name="%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83-1" class="anchor" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83-1"><span class="octicon octicon-link"></span></a>测是环境：
-    </h2>
-    <div>Version : 3.5</div>
-    <p>engine，dwh 运行在同一台机器上；reports 运行在一台单独的机器上:</p>
-    <ul>
-       <li>vm_166：作 engine &amp; dwh 机器</li>
-       <li>vm_167：作 reports 机器</li>
-    </ul>
-
-    <h2>
-       <a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1"><span class="octicon octicon-link"></span></a>具体操作：
-    </h2>
-
-    <h3>
-       <a name="vm_166-" class="anchor" href="#vm_166-"><span class="octicon octicon-link"></span></a>vm_166 :
-    </h3>
-
-    <pre>
-       <code>
-          Host name : zhangyingyun166.eayunci
-       </code>
-    </pre>
-
-    <ol>
-       <li>yum -y update </li>
-       <li>yum -y install ????????</li>
-       <li>yum -y ovirt-engine</li>
-       <li>yum -y ovirt-engine-dwh</li>
-       <li>engine-setup</li>
-    </ol>
-
-    <h3>
-       <a name="vm_167-" class="anchor" href="#vm_167-"><span class="octicon octicon-link"></span></a>vm_167 :
-    </h3>
-
-    <pre>
-       <code>
-          Host name : zhangyingyun167.eayunci
-       </code>
-    </pre>
-
-    <ol>
-       <li>yum -y update</li>
-       <li>yum -y install
-          <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a>
-       </li>
-       <li>yum -y ovirt-engine-reports</li>
-       <li>由于需要手动获取到 engine &amp; dwh 数据库的密码，所以要事先在 /etc/hosts 中，不但要配置本机的域名还要配置zhangyingyun166.eayunci 的域名解析。</li>
-       <li>engine-setup</li>
-       <li> </li>
-    </ol>
-    <hr>
-    </section>
+<h1>
+<a name="%E6%B5%8B%E8%AF%95%E4%B8%80" class="anchor" href="#%E6%B5%8B%E8%AF%95%E4%B8%80"><span class="octicon octicon-link"></span></a>测试一：</h1>
+<h2>
+<a name="%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83" class="anchor" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="octicon octicon-link"></span></a>测试环境：</h2>
+<div>Version : 3.5</div>
+<p>Engine，dwh，reports 分别在不同的机器上:</p>
+<ul>
+<li>vm_187 : 作 engine 机器</li>
+<li>vm_188 : 作 dwh 机器</li>
+<li>vm_189 : 作 reports 机器</li>
+</ul>
+<h2>
+<a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="octicon octicon-link"></span></a>具体操作：</h2>
+<h3>
+<a name="vm_187-" class="anchor" href="#vm_187-"><span class="octicon octicon-link"></span></a>vm_187 :</h3>
+<div>&nbsp;&nbsp;Host name : zhangyingyun187.eayunci</div>
+<ol>
+<li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
+<pre><code>yum -y update</code></pre>
+升级成功后，重启系统
+<li>配置oVirt3.5的yum源</li>
+<pre><code>yum -y install <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a></code></pre>
+<li>安装oVirt engine</li>
+<pre><code>yum -y install ovirt-engine</code></pre>
+此命令将下载oVirt engine安装软件包，并解决所有的依赖关系。
+<li>配置oVirt engine</li>
+<pre><code>engine-setup</code></pre>
+<pre><code>[root@zhangyingyun187 ~]# engine-setup
+[ INFO  ] Stage: Initializing
+[ INFO  ] Stage: Environment setup
+          Configuration files: ['/etc/ovirt-engine-setup.conf.d/10-packaging-jboss.conf', '/etc/ovirt-engine-setup.conf.d/10-packaging.conf']
+          Log file: /var/log/ovirt-engine/setup/ovirt-engine-setup-20141021145523-dllr36.log
+          Version: otopi-1.3.0 (otopi-1.3.0-1.20141006.git080804f.el6)
+[ INFO  ] Stage: Environment packages setup
+[ INFO  ] Yum Downloading: repomdm0VwfBtmp.xml (0%)
+[ INFO  ] Stage: Programs detection
+[ INFO  ] Stage: Environment setup
+[ INFO  ] Stage: Environment customization
+         
+          --== PRODUCT OPTIONS ==--
+         
+          Configure Engine on this host (Yes, No) [Yes]: 
+          Configure WebSocket Proxy on this host (Yes, No) [Yes]: 
+         
+          --== PACKAGES ==--
+         
+[ INFO  ] Checking for product updates...
+[ INFO  ] No product updates found
+         
+          --== ALL IN ONE CONFIGURATION ==--
+         
+         
+          --== NETWORK CONFIGURATION ==--
+         
+          Setup can automatically configure the firewall on this system.
+          Note: automatic configuration of the firewall may overwrite current settings.
+          Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
+          The following firewall managers were detected on this system: iptables
+          Firewall manager to configure (iptables): 
+[ ERROR ] Invalid value
+          Firewall manager to configure (iptables): iptables
+[ INFO  ] iptables will be configured as firewall manager.
+          Host fully qualified DNS name of this server [zhangyingyun187.eayunci]: 
+[WARNING] Failed to resolve zhangyingyun187.eayunci using DNS, it can be resolved only locally
+         
+          --== DATABASE CONFIGURATION ==--
+         
+          Where is the Engine database located? (Local, Remote) [Local]: 
+          Setup can configure the local postgresql server automatically for the engine to run. This may conflict with existing applications.
+          Would you like Setup to automatically configure postgresql and create Engine database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+         
+          --== OVIRT ENGINE CONFIGURATION ==--
+         
+          Engine admin password: 
+          Confirm engine admin password: 
+[WARNING] Password is weak: 过于简单化/系统化
+          Use weak password? (Yes, No) [No]: yes
+          Application mode (Both, Virt, Gluster) [Both]: 
+         
+          --== PKI CONFIGURATION ==--
+         
+          Organization name for certificate [eayunci]: 
+         
+          --== APACHE CONFIGURATION ==--
+         
+          Setup can configure the default page of the web server to present the application home page. This may conflict with existing applications.
+          Do you wish to set the application as the default page of the web server? (Yes, No) [Yes]: 
+          Setup can configure apache to use SSL using a certificate issued from the internal CA.
+          Do you wish Setup to configure that, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+         
+          --== SYSTEM CONFIGURATION ==--
+         
+          Configure an NFS share on this server to be used as an ISO Domain? (Yes, No) [Yes]: 
+          Local ISO domain path [/var/lib/exports/iso-20141021070607]: 
+          Local ISO domain ACL - note that the default will restrict access to zhangyingyun187.eayunci only, for security reasons [zhangyingyun187.eayunci(rw)]: 
+          Local ISO domain name [ISO_DOMAIN]: 
+         
+          --== MISC CONFIGURATION ==--
+         
+         
+          --== END OF CONFIGURATION ==--
+         
+[ INFO  ] Stage: Setup validation
+[WARNING] Less than 16384MB of memory is available
+         
+          --== CONFIGURATION PREVIEW ==--
+         
+          Application mode                        : both
+          Firewall manager                        : iptables
+          Update Firewall                         : True
+          Host FQDN                               : zhangyingyun187.eayunci
+          Engine database name                    : engine
+          Engine database secured connection      : False
+          Engine database host                    : localhost
+          Engine database user name               : engine
+          Engine database host name validation    : False
+          Engine database port                    : 5432
+          Engine installation                     : True
+          NFS setup                               : True
+          PKI organization                        : eayunci
+          NFS mount point                         : /var/lib/exports/iso-20141021070607
+          NFS export ACL                          : zhangyingyun187.eayunci(rw)
+          Configure local Engine database         : True
+          Set application as default page         : True
+          Configure Apache SSL                    : True
+          Configure WebSocket Proxy               : True
+         
+          Please confirm installation settings (OK, Cancel) [OK]: 
+[ INFO  ] Stage: Transaction setup
+[ INFO  ] Stopping engine service
+[ INFO  ] Stopping ovirt-fence-kdump-listener service
+[ INFO  ] Stopping websocket-proxy service
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Stage: Package installation
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Creating PostgreSQL 'engine' database
+[ INFO  ] Configuring PostgreSQL
+[ INFO  ] Creating/refreshing Engine database schema
+[ INFO  ] Creating CA
+[ INFO  ] Configuring WebSocket Proxy
+[ INFO  ] Generating post install configuration file '/etc/ovirt-engine-setup.conf.d/20-setup-ovirt-post.conf'
+[ INFO  ] Stage: Transaction commit
+[ INFO  ] Stage: Closing up
+         
+          --== SUMMARY ==--
+         
+[WARNING] Less than 16384MB of memory is available
+          SSH fingerprint: 9D:73:AC:27:5F:9E:F6:2F:71:71:1D:96:CE:75:25:49
+          Internal CA D9:CB:EE:22:04:73:51:5F:54:DD:CD:4B:4B:3C:43:C9:2F:40:36:61
+          Web access is enabled at:
+              http://zhangyingyun187.eayunci:80/ovirt-engine
+              https://zhangyingyun187.eayunci:443/ovirt-engine
+          Please use the user "admin" and password specified in order to login
+         
+          --== END OF SUMMARY ==--
+         
+[ INFO  ] Starting engine service
+[ INFO  ] Restarting httpd
+[ INFO  ] Restarting nfs services
+[ INFO  ] Stage: Clean up
+          Log file is located at /var/log/ovirt-engine/setup/ovirt-engine-setup-20141021145523-dllr36.log
+[ INFO  ] Generating answer file '/var/lib/ovirt-engine/setup/answers/20141021151027-setup.conf'
+[ INFO  ] Stage: Pre-termination
+[ INFO  ] Stage: Termination
+[ INFO  ] Execution of setup completed successfully
+</code></pre>
+<li><a name="Engineconf">查看 Engine 数据库的配置文件(位置在：/etc/ovirt-engine/engine-dwhd.conf.d/10-setup-datebase.conf)</a></li>
+<pre><code>ENGINE_DB_HOST="localhost"
+ENGINE_DB_PORT="5432"
+ENGINE_DB_USER="engine"
+ENGINE_DB_PASSWORD="JMZXFAFY1f0iZw3Bs2POh6"
+ENGINE_DB_DATABASE="engine"
+ENGINE_DB_SECURED="False"
+ENGINE_DB_SECURED_VALIDATION="False"
+ENGINE_DB_DRIVER="org.postgresql.Driver"
+ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB_DATABASE}?sslfactory=org.postgresql.ssl.NonValidatingFactory"
+</code></pre>
+</ol>
+<h3>
+<a name="vm_188-" class="anchor" href="#vm_188-"><span class="octicon octicon-link"></span></a>vm_188 :</h3>
+<div>&nbsp;&nbsp;Host name : zhangyingyun188.eayunci</div>
+<ol>
+<li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
+<pre><code>yum -y update</code></pre>
+升级成功后，重启系统
+<li>配置oVirt3.5的yum源</li>
+<pre><code>yum -y install <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a></code></pre>
+<li>安装oVirt engine dwh</li>
+<pre><code>yum -y install ovirt-engine-dwh</code></pre>
+此命令将下载oVirt engine dwh安装软件包，并解决所有的依赖关系。
+<li>配置oVirt engine</li>
+<pre><code>engine-setup</code></pre>
+<pre><code>root@zhangyingyun188 ~]# engine-setup
+[ INFO  ] Stage: Initializing
+[ INFO  ] Stage: Environment setup
+          Configuration files: ['/etc/ovirt-engine-setup.conf.d/10-packaging-jboss.conf']
+          Log file: /var/log/ovirt-engine/setup/ovirt-engine-setup-20141021231244-2j8hg8.log
+          Version: otopi-1.3.0 (otopi-1.3.0-1.20141006.git080804f.el6)
+[ INFO  ] Stage: Environment packages setup
+[ INFO  ] Stage: Programs detection
+[ INFO  ] Stage: Environment customization
+         
+          --== PRODUCT OPTIONS ==--
+         
+          Configure Data Warehouse on this host (Yes, No) [Yes]: 
+         
+          --== PACKAGES ==--
+         
+[ INFO  ] Checking for product updates...
+[ INFO  ] No product updates found
+         
+          --== ALL IN ONE CONFIGURATION ==--
+         
+         
+          --== NETWORK CONFIGURATION ==--
+         
+          Setup can automatically configure the firewall on this system.
+          Note: automatic configuration of the firewall may overwrite current settings.
+          Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
+[ INFO  ] iptables will be configured as firewall manager.
+          Host fully qualified DNS name of this server [zhangyingyun188.eayunci]: 
+[WARNING] Failed to resolve zhangyingyun188.eayunci using DNS, it can be resolved only locally
+         
+          --== DATABASE CONFIGURATION ==--
+         
+          Where is the DWH database located? (Local, Remote) [Local]: 
+          Setup can configure the local postgresql server automatically for the DWH to run. This may conflict with existing applications.
+          Would you like Setup to automatically configure postgresql and create DWH database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+          Engine database host []: zhangyingyun187.eayunci
+          Engine database port [5432]: 
+          Engine database secured connection (Yes, No) [No]: 
+          Engine database name [engine]: 
+          Engine database user [engine]: 
+          Engine database password:             <a href="#Engineconf">查看 engine 数据库密码</a> 
+         
+          --== OVIRT ENGINE CONFIGURATION ==--
+         
+         
+          --== PKI CONFIGURATION ==--
+         
+         
+          --== APACHE CONFIGURATION ==--
+         
+         
+          --== SYSTEM CONFIGURATION ==--
+         
+         
+          --== MISC CONFIGURATION ==--
+         
+         
+          --== END OF CONFIGURATION ==--
+         
+[ INFO  ] Stage: Setup validation
+         
+          --== CONFIGURATION PREVIEW ==--
+         
+          Firewall manager                        : iptables
+          Update Firewall                         : True
+          Host FQDN                               : zhangyingyun188.eayunci
+          DWH installation                        : True
+          DWH database name                       : ovirt_engine_history
+          DWH database secured connection         : False
+          DWH database host                       : localhost
+          DWH database user name                  : ovirt_engine_history
+          DWH database host name validation       : False
+          DWH database port                       : 5432
+          Configure local DWH database            : True
+          Engine database name                    : engine
+          Engine database secured connection      : False
+          Engine database host                    : zhangyingyun187.eayunci
+          Engine database user name               : engine
+          Engine database host name validation    : False
+          Engine database port                    : 5432
+         
+          Please confirm installation settings (OK, Cancel) [OK]: 
+[ INFO  ] Stage: Transaction setup
+[ INFO  ] Stopping dwh service
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Stage: Package installation
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Initializing PostgreSQL
+[ INFO  ] Creating PostgreSQL 'ovirt_engine_history' database
+[ INFO  ] Configuring PostgreSQL
+[ INFO  ] Creating/refreshing DWH database schema
+[ INFO  ] Generating post install configuration file '/etc/ovirt-engine-setup.conf.d/20-setup-ovirt-post.conf'
+[ INFO  ] Stage: Transaction commit
+[ INFO  ] Stage: Closing up
+         
+          --== SUMMARY ==--
+         
+         
+          --== END OF SUMMARY ==--
+         
+[ INFO  ] Starting dwh service
+[ INFO  ] Stage: Clean up
+          Log file is located at /var/log/ovirt-engine/setup/ovirt-engine-setup-20141021231244-2j8hg8.log
+[ INFO  ] Generating answer file '/var/lib/ovirt-engine/setup/answers/20141021231704-setup.conf'
+[ INFO  ] Stage: Pre-termination
+[ INFO  ] Stage: Termination
+[ INFO  ] Execution of setup completed successfully
+</code></pre>
+<li><a name="EngineDWHconf">查看 DWH 数据库的配置文件（位置在/etc/ovirt-engine-dwh/engine-dwhd.conf.d/10-setup-datebase.conf）</a></li>
+<pre><code>ENGINE_DB_HOST="zhangyingyun187.eayunci"
+ENGINE_DB_PORT="5432"
+ENGINE_DB_USER="engine"
+ENGINE_DB_PASSWORD="JMZXFAFY1f0iZw3Bs2POh6"
+ENGINE_DB_DATABASE="engine"
+ENGINE_DB_SECURED="False"
+ENGINE_DB_SECURED_VALIDATION="False"
+ENGINE_DB_DRIVER="org.postgresql.Driver"
+ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB_DATABASE}?sslfactory=org.postgresql.ssl.NonValidatingFactory"
+DWH_DB_HOST="localhost"
+DWH_DB_PORT="5432"
+DWH_DB_USER="ovirt_engine_history"
+DWH_DB_PASSWORD="wX17ngdUzWDoM25UyZZnnI"
+DWH_DB_DATABASE="ovirt_engine_history"
+DWH_DB_SECURED="False"
+DWH_DB_SECURED_VALIDATION="False"
+DWH_DB_DRIVER="org.postgresql.Driver"
+DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?sslfactory=org.postgresql.ssl.NonValidatingFactory"
+</code></pre>
+</ol>
+<h3>
+<a name="vm_189-" class="anchor" href="#vm_189-"><span class="octicon octicon-link"></span></a>vm_189 :</h3>
+<div>&nbsp;&nbsp;Host name : zhangyingyun189.eayunci</div>
+<ol>
+<li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
+<pre><code>yum -y update</code></pre>
+升级成功后，重启系统
+<li>配置oVirt3.5的yum源</li>
+<pre><code>yum -y install<a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a></code></pre>
+<li>安装oVirt engine reports</li>
+<pre><code>yum -y install ovirt-engine-reports</code></pre>
+此命令将下载oVirt engine reports安装软件包，并解决所有的依赖关系。
+<li>配置oVirt engine</li>
+<pre><code>engine-setup</code></pre>
+<li>由于需要手动获取到dwh数据库的密码，所以要事先在 /etc/hosts中，不但要配置本机的域名还要配置zhangyingyun188.eayunci的域名解析。</li>
+<pre><code>root@zhangyingyun189 network-scripts]# engine-setup
+[ INFO  ] Stage: Initializing
+[ INFO  ] Stage: Environment setup
+          Configuration files: ['/etc/ovirt-engine-setup.conf.d/10-packaging-jboss.conf']
+          Log file: /var/log/ovirt-engine/setup/ovirt-engine-setup-20141021232448-snc1qo.log
+          Version: otopi-1.3.0 (otopi-1.3.0-1.20141006.git080804f.el6)
+[ INFO  ] Stage: Environment packages setup
+[ INFO  ] Stage: Programs detection
+[ INFO  ] Stage: Environment customization
+         
+          --== PRODUCT OPTIONS ==--
+         
+          Configure Reports on this host (Yes, No) [Yes]: 
+         
+          --== PACKAGES ==--
+         
+[ INFO  ] Checking for product updates...
+[ INFO  ] No product updates found
+         
+          --== ALL IN ONE CONFIGURATION ==--
+         
+         
+          --== NETWORK CONFIGURATION ==--
+         
+          Setup can automatically configure the firewall on this system.
+          Note: automatic configuration of the firewall may overwrite current settings.
+          Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
+[ INFO  ] iptables will be configured as firewall manager.
+          Host fully qualified DNS name of this server [zhangyingyun189.eayunci]: 
+[WARNING] Failed to resolve zhangyingyun189.eayunci using DNS, it can be resolved only locally
+          Host fully qualified DNS name of the engine server []: zhangyingyun187.eayunci
+[WARNING] Failed to resolve zhangyingyun187.eayunci using DNS, it can be resolved only locally
+         
+          --== DATABASE CONFIGURATION ==--
+         
+          Where is the Reports database located? (Local, Remote) [Local]: 
+          Setup can configure the local postgresql server automatically for the Reports to run. This may conflict with existing applications.
+          Would you like Setup to automatically configure postgresql and create Reports database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+          DWH database host []: zhangyingyun188.eayunci
+          DWH database port [5432]: 
+          DWH database secured connection (Yes, No) [No]: 
+          DWH database name [ovirt_engine_history]: 
+          DWH database user [ovirt_engine_history]: 
+          DWH database password:        <a href="#EngineDWHconf">查看 engine-dwh 数据库密码</a> 
+         
+          --== OVIRT ENGINE CONFIGURATION ==--
+         
+         
+          --== PKI CONFIGURATION ==--
+         
+          Setup will need to do some actions on the remote engine server. Either automatically, using ssh as root to access it, or you will be prompted to manually perform each such action.
+          Please choose one of the following:
+          1 - Access remote engine server using ssh as root
+          2 - Perform each action manually, use files to copy content around
+          (1, 2) [1]: 
+          ssh port on remote engine server [22]: 
+          root password on remote engine server zhangyingyun187.eayunci: 
+[ INFO  ] Signing the Reports certificate on the engine server
+[ INFO  ] Reports certificate signed successfully
+[ INFO  ] Signing the Apache certificate on the engine server
+[ INFO  ] Apache certificate signed successfully
+         
+          --== APACHE CONFIGURATION ==--
+         
+          Setup can configure apache to use SSL using a certificate issued from the internal CA.
+          Do you wish Setup to configure that, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+         
+          --== SYSTEM CONFIGURATION ==--
+         
+         
+          --== MISC CONFIGURATION ==--
+         
+          Reports power users password: 
+          Confirm Reports power users password: 
+[WARNING] Password is weak: 过于简单化/系统化
+          Use weak password? (Yes, No) [No]: yes
+         
+          --== END OF CONFIGURATION ==--
+         
+[ INFO  ] Stage: Setup validation
+         
+          --== CONFIGURATION PREVIEW ==--
+         
+          Firewall manager                        : iptables
+          Update Firewall                         : True
+          Host FQDN                               : zhangyingyun189.eayunci
+          Configure Apache SSL                    : True
+          Reports installation                    : True
+          Reports database name                   : ovirt_engine_reports
+          Reports database secured connection     : False
+          Reports database host                   : localhost
+          Reports database user name              : ovirt_engine_reports
+          Reports database host name validation   : False
+          Reports database port                   : 5432
+          Configure local Reports database        : True
+          DWH database name                       : ovirt_engine_history
+          DWH database secured connection         : False
+          DWH database host                       : zhangyingyun188.eayunci
+          DWH database user name                  : ovirt_engine_history
+          DWH database host name validation       : False
+          DWH database port                       : 5432
+          Engine Host FQDN                        : zhangyingyun187.eayunci
+         
+          Please confirm installation settings (OK, Cancel) [OK]: 
+[ INFO  ] Stage: Transaction setup
+[ INFO  ] Stopping reports service
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Stage: Package installation
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Initializing PostgreSQL
+[ INFO  ] Creating PostgreSQL 'ovirt_engine_reports' database
+[ INFO  ] Configuring PostgreSQL
+[ INFO  ] Configuring PostgreSQL
+[ INFO  ] Deploying Jasper
+[ INFO  ] Importing data into Jasper
+[ INFO  ] Configuring Jasper Java resources
+[ INFO  ] Configuring Jasper Database resources
+[ INFO  ] Customizing Jasper
+[ INFO  ] Customizing Jasper metadata
+[ INFO  ] Generating post install configuration file '/etc/ovirt-engine-setup.conf.d/20-setup-ovirt-post.conf'
+[ INFO  ] Stage: Transaction commit
+[ INFO  ] Stage: Closing up
+         
+          --== SUMMARY ==--
+         
+         
+          --== END OF SUMMARY ==--
+         
+[ INFO  ] Restarting httpd
+[ INFO  ] Starting reports service
+[ INFO  ] Stage: Clean up
+          Log file is located at /var/log/ovirt-engine/setup/ovirt-engine-setup-20141028034458-bvoh1r.log
+[ INFO  ] Generating answer file '/var/lib/ovirt-engine/setup/answers/20141028035033-setup.conf'
+[ INFO  ] Stage: Pre-termination
+[ INFO  ] Stage: Termination
+[ INFO  ] Execution of setup completed successfully
+</code></pre>
+</ol>
+<hr>
+<h1>
+<a name="%E6%B5%8B%E8%AF%95%E4%BA%8C" class="anchor" href="#%E6%B5%8B%E8%AF%95%E4%BA%8C"><span class="octicon octicon-link"></span></a>测试二：</h1>
+<h2>
+<a name="%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83-1" class="anchor" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83-1"><span class="octicon octicon-link"></span></a>测试环境：</h2>
+<div>Version : 3.5</div>
+<p>Engine，dwh在同一台机器上；reports在单独的机器上:</p>
+<ul>
+<li>vm_166：做engine &amp; dwh机器</li>
+<li>vm_167：做reports机器</li>
+</ul>
+<h2>
+<a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1"><span class="octicon octicon-link"></span></a>具体操作：</h2>
+<h3>
+<a name="vm_166-" class="anchor" href="#vm_166-"><span class="octicon octicon-link"></span></a>vm_166 :</h3>
+<div>Host name : zhangyingyun166.eayunci</div>
+<ol>
+<li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
+<pre><code>yum -y update</code></pre>
+升级成功后，重启系统
+<li>配置oVirt3.5的yum源</li>
+<pre><code>yum -y install <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a></code></pre>
+<li>安装oVirt engine</li>
+<pre><code>yum -y install ovirt-engine</code></pre>
+此命令将下载oVirt engine安装软件包，并解决所有的依赖关系。
+<li>安装oVirt engine dwh</li>
+<pre><code>yum -y install ovirt-engine-dwh</code></pre>
+<li>配置oVirt engine</li>
+<pre><code>engine-setup</code></pre>
+<pre><code>[root@zhangyingyun166 ~]# engine-setup
+[ INFO  ] Stage: Initializing
+[ INFO  ] Stage: Environment setup
+          Configuration files: ['/etc/ovirt-engine-setup.conf.d/10-packaging-jboss.conf', '/etc/ovirt-engine-setup.conf.d/10-packaging.conf']
+          Log file: /var/log/ovirt-engine/setup/ovirt-engine-setup-20141021150138-xd6tu4.log
+          Version: otopi-1.3.0 (otopi-1.3.0-1.20141006.git080804f.el6)
+[ INFO  ] Stage: Environment packages setup
+[ INFO  ] Stage: Programs detection
+[ INFO  ] Stage: Environment setup
+[ INFO  ] Stage: Environment customization
+         
+          --== PRODUCT OPTIONS ==--
+         
+          Configure Engine on this host (Yes, No) [Yes]: 
+          Configure Data Warehouse on this host (Yes, No) [Yes]: 
+          Configure WebSocket Proxy on this host (Yes, No) [Yes]: 
+         
+          --== PACKAGES ==--
+         
+[ INFO  ] Checking for product updates...
+[ INFO  ] No product updates found
+         
+          --== ALL IN ONE CONFIGURATION ==--
+         
+         
+          --== NETWORK CONFIGURATION ==--
+         
+          Setup can automatically configure the firewall on this system.
+          Note: automatic configuration of the firewall may overwrite current settings.
+          Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
+[ INFO  ] iptables will be configured as firewall manager.
+          Host fully qualified DNS name of this server [zhangyingyun166.eayunci]: 
+[WARNING] Failed to resolve zhangyingyun166.eayunci using DNS, it can be resolved only locally
+         
+          --== DATABASE CONFIGURATION ==--
+         
+          Where is the DWH database located? (Local, Remote) [Local]: 
+          Setup can configure the local postgresql server automatically for the DWH to run. This may conflict with existing applications.
+          Would you like Setup to automatically configure postgresql and create DWH database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+          Where is the Engine database located? (Local, Remote) [Local]: 
+          Setup can configure the local postgresql server automatically for the engine to run. This may conflict with existing applications.
+          Would you like Setup to automatically configure postgresql and create Engine database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+         
+          --== OVIRT ENGINE CONFIGURATION ==--
+         
+          Engine admin password: 
+          Confirm engine admin password: 
+[WARNING] Password is weak: 过于简单化/系统化
+          Use weak password? (Yes, No) [No]: yes
+          Application mode (Both, Virt, Gluster) [Both]: 
+         
+          --== PKI CONFIGURATION ==--
+         
+          Organization name for certificate [eayunci]: 
+         
+          --== APACHE CONFIGURATION ==--
+         
+          Setup can configure the default page of the web server to present the application home page. This may conflict with existing applications.
+          Do you wish to set the application as the default page of the web server? (Yes, No) [Yes]: 
+          Setup can configure apache to use SSL using a certificate issued from the internal CA.
+          Do you wish Setup to configure that, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+         
+          --== SYSTEM CONFIGURATION ==--
+         
+          Configure an NFS share on this server to be used as an ISO Domain? (Yes, No) [Yes]: 
+          Local ISO domain path [/var/lib/exports/iso-20141021070249]: 
+          Local ISO domain ACL - note that the default will restrict access to zhangyingyun166.eayunci only, for security reasons [zhangyingyun166.eayunci(rw)]: 
+          Local ISO domain name [ISO_DOMAIN]: 
+         
+          --== MISC CONFIGURATION ==--
+         
+         
+          --== END OF CONFIGURATION ==--
+         
+[ INFO  ] Stage: Setup validation
+[WARNING] Less than 16384MB of memory is available
+         
+          --== CONFIGURATION PREVIEW ==--
+         
+          Application mode                        : both
+          Firewall manager                        : iptables
+          Update Firewall                         : True
+          Host FQDN                               : zhangyingyun166.eayunci
+          Engine database name                    : engine
+          Engine database secured connection      : False
+          Engine database host                    : localhost
+          Engine database user name               : engine
+          Engine database host name validation    : False
+          Engine database port                    : 5432
+          Engine installation                     : True
+          NFS setup                               : True
+          PKI organization                        : eayunci
+          NFS mount point                         : /var/lib/exports/iso-20141021070249
+          NFS export ACL                          : zhangyingyun166.eayunci(rw)
+          Configure local Engine database         : True
+          Set application as default page         : True
+          Configure Apache SSL                    : True
+          DWH installation                        : True
+          DWH database name                       : ovirt_engine_history
+          DWH database secured connection         : False
+          DWH database host                       : localhost
+          DWH database user name                  : ovirt_engine_history
+          DWH database host name validation       : False
+          DWH database port                       : 5432
+          Configure local DWH database            : True
+          Configure WebSocket Proxy               : True
+         
+          Please confirm installation settings (OK, Cancel) [OK]: 
+[ INFO  ] Stage: Transaction setup
+[ INFO  ] Stopping dwh service
+[ INFO  ] Stopping engine service
+[ INFO  ] Stopping ovirt-fence-kdump-listener service
+[ INFO  ] Stopping websocket-proxy service
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Stage: Package installation
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Creating PostgreSQL 'engine' database
+[ INFO  ] Configuring PostgreSQL
+[ INFO  ] Creating PostgreSQL 'ovirt_engine_history' database
+[ INFO  ] Configuring PostgreSQL
+[ INFO  ] Creating/refreshing Engine database schema
+[ INFO  ] Creating CA
+[ INFO  ] Creating/refreshing DWH database schema
+[ INFO  ] Configuring WebSocket Proxy
+[ INFO  ] Generating post install configuration file '/etc/ovirt-engine-setup.conf.d/20-setup-ovirt-post.conf'
+[ INFO  ] Stage: Transaction commit
+[ INFO  ] Stage: Closing up
+         
+          --== SUMMARY ==--
+         
+[WARNING] Less than 16384MB of memory is available
+          SSH fingerprint: BA:75:ED:A2:7D:9B:BE:E9:9D:B3:53:82:D5:E1:84:06
+          Internal CA 7D:22:8E:5D:55:B9:0C:B5:93:AD:41:EB:42:69:A6:C1:86:85:DF:CD
+          Web access is enabled at:
+              http://zhangyingyun166.eayunci:80/ovirt-engine
+              https://zhangyingyun166.eayunci:443/ovirt-engine
+          Please use the user "admin" and password specified in order to login
+         
+          --== END OF SUMMARY ==--
+         
+[ INFO  ] Starting engine service
+[ INFO  ] Restarting httpd
+[ INFO  ] Restarting nfs services
+[ INFO  ] Starting dwh service
+[ INFO  ] Stage: Clean up
+          Log file is located at /var/log/ovirt-engine/setup/ovirt-engine-setup-20141021150138-xd6tu4.log
+[ INFO  ] Generating answer file '/var/lib/ovirt-engine/setup/answers/20141021150834-setup.conf'
+[ INFO  ] Stage: Pre-termination
+[ INFO  ] Stage: Termination
+[ INFO  ] Execution of setup completed successfully
+</code></pre>
+<li><a name="EngineDWHconf_">查看 DWH 数据库的配置文件（位置在/etc/ovirt-engine/engine.conf.d/10-setup-datebase.conf）</a></li>
+<pre><code>ENGINE_DB_HOST="localhost"
+ENGINE_DB_PORT="5432"
+ENGINE_DB_USER="engine"
+ENGINE_DB_PASSWORD="ryosMPtGLFNlQYzlhMjD0z"
+ENGINE_DB_DATABASE="engine"
+ENGINE_DB_SECURED="False"
+ENGINE_DB_SECURED_VALIDATION="False"
+ENGINE_DB_DRIVER="org.postgresql.Driver"
+ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB_DATABASE}?sslfactory=org.postgresql.ssl.NonValidatingFactory"
+DWH_DB_HOST="localhost"
+DWH_DB_PORT="5432"
+DWH_DB_USER="ovirt_engine_history"
+DWH_DB_PASSWORD="IBWXTrk5cX9gM9nP80uBM1"
+DWH_DB_DATABASE="ovirt_engine_history"
+DWH_DB_SECURED="False"
+DWH_DB_SECURED_VALIDATION="False"
+DWH_DB_DRIVER="org.postgresql.Driver"
+DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?sslfactory=org.postgresql.ssl.NonValidatingFactory"
+</code></pre>
+</ol>
+<h3>
+<a name="vm_167-" class="anchor" href="#vm_167-"><span class="octicon octicon-link"></span></a>vm_167 :</h3>
+<div>Host name : zhangyingyun167.eayunci</div>
+</code></pre>
+<ol>
+<li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
+<pre><code>yum -y update</code></pre>
+升级成功后，重启系统
+<li>配置oVirt3.5的yum源</li>
+<pre><code>yum -y install <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a></code></pre>
+<li>安装oVirt engine reports</li>
+<pre><code>yum -y install ovirt-engine-reports</code></pre>
+此命令将下载oVirt engine reports安装软件包，并解决所有的依赖关系。
+<li>配置oVirt engine</li>
+<pre><code>engine-setup</code></pre>
+<pre><code>[ INFO  ] Stage: Initializing
+[ INFO  ] Stage: Environment setup
+          Configuration files: ['/etc/ovirt-engine-setup.conf.d/10-packaging-jboss.conf']
+          Log file: /var/log/ovirt-engine/setup/ovirt-engine-setup-20141028004447-izvbnu.log
+          Version: otopi-1.3.1_master (otopi-1.3.1-0.0.master.20141026.gitd534996.el6)
+[ INFO  ] Stage: Environment packages setup
+[ INFO  ] Stage: Programs detection
+[ INFO  ] Stage: Environment customization
+         
+          --== PRODUCT OPTIONS ==--
+         
+          Configure Reports on this host (Yes, No) [Yes]: 
+         
+          --== PACKAGES ==--
+         
+[ INFO  ] Checking for product updates...
+[ INFO  ] No product updates found
+         
+          --== ALL IN ONE CONFIGURATION ==--
+         
+         
+          --== NETWORK CONFIGURATION ==--
+         
+          Setup can automatically configure the firewall on this system.
+          Note: automatic configuration of the firewall may overwrite current settings.
+          Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
+[ INFO  ] iptables will be configured as firewall manager.
+          Host fully qualified DNS name of this server [zhangyingyun167.eayunci]: 
+[WARNING] Failed to resolve zhangyingyun167.eayunci using DNS, it can be resolved only locally
+          Host fully qualified DNS name of the engine server []: zhangyingyun166.eayunci
+[WARNING] Failed to resolve zhangyingyun166.eayunci using DNS, it can be resolved only locally
+         
+          --== DATABASE CONFIGURATION ==--
+         
+          Where is the Reports database located? (Local, Remote) [Local]: 
+          Setup can configure the local postgresql server automatically for the Reports to run. This may conflict with existing applications.
+          Would you like Setup to automatically configure postgresql and create Reports database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+          DWH database host []: zhangyingyun166.eayunci
+          DWH database port [5432]: 
+          DWH database secured connection (Yes, No) [No]: 
+          DWH database name [ovirt_engine_history]: 
+          DWH database user [ovirt_engine_history]: 
+          DWH database password:             <a href="#EngineDWHconf_">查看 engine-dwh 数据库密码</a>
+         
+          --== OVIRT ENGINE CONFIGURATION ==--
+         
+         
+          --== PKI CONFIGURATION ==--
+         
+          Setup will need to do some actions on the remote engine server. Either automatically, using ssh as root to access it, or you will be prompted to manually perform each such action.
+          Please choose one of the following:
+          1 - Access remote engine server using ssh as root
+          2 - Perform each action manually, use files to copy content around
+          (1, 2) [1]: 
+          ssh port on remote engine server [22]: 
+          root password on remote engine server zhangyingyun166.eayunci: 
+[ INFO  ] Signing the Reports certificate on the engine server
+[ INFO  ] Reports certificate signed successfully
+[ INFO  ] Signing the Apache certificate on the engine server
+[ INFO  ] Apache certificate signed successfully
+         
+          --== APACHE CONFIGURATION ==--
+         
+          Setup can configure apache to use SSL using a certificate issued from the internal CA.
+          Do you wish Setup to configure that, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
+         
+          --== SYSTEM CONFIGURATION ==--
+         
+         
+          --== MISC CONFIGURATION ==--
+         
+          Reports power users password: 
+          Confirm Reports power users password: 
+[WARNING] Password is weak: 过于简单化/系统化
+          Use weak password? (Yes, No) [No]: yes
+         
+          --== END OF CONFIGURATION ==--
+         
+[ INFO  ] Stage: Setup validation
+         
+          --== CONFIGURATION PREVIEW ==--
+         
+          Firewall manager                        : iptables
+          Update Firewall                         : True
+          Host FQDN                               : zhangyingyun167.eayunci
+          Configure Apache SSL                    : True
+          Reports installation                    : True
+          Reports database name                   : ovirt_engine_reports
+          Reports database secured connection     : False
+          Reports database host                   : localhost
+          Reports database user name              : ovirt_engine_reports
+          Reports database host name validation   : False
+          Reports database port                   : 5432
+          Configure local Reports database        : True
+          DWH database name                       : ovirt_engine_history
+          DWH database secured connection         : False
+          DWH database host                       : zhangyingyun166.eayunci
+          DWH database user name                  : ovirt_engine_history
+          DWH database host name validation       : False
+          DWH database port                       : 5432
+          Engine Host FQDN                        : zhangyingyun166.eayunci
+         
+          Please confirm installation settings (OK, Cancel) [OK]: 
+[ INFO  ] Stage: Transaction setup
+[ INFO  ] Stopping reports service
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Stage: Package installation
+[ INFO  ] Stage: Misc configuration
+[ INFO  ] Creating PostgreSQL 'ovirt_engine_reports' database
+[ INFO  ] Configuring PostgreSQL
+[ INFO  ] Deploying Jasper
+[ INFO  ] Importing data into Jasper
+[ INFO  ] Configuring Jasper Java resources
+[ INFO  ] Configuring Jasper Database resources
+[ INFO  ] Customizing Jasper
+[ INFO  ] Customizing Jasper metadata
+[ INFO  ] Generating post install configuration file '/etc/ovirt-engine-setup.conf.d/20-setup-ovirt-post.conf'
+[ INFO  ] Stage: Transaction commit
+[ INFO  ] Stage: Closing up
+         
+          --== SUMMARY ==--
+         
+         
+          --== END OF SUMMARY ==--
+         
+[ INFO  ] Restarting httpd
+[ INFO  ] Starting reports service
+[ INFO  ] Stage: Clean up
+          Log file is located at /var/log/ovirt-engine/setup/ovirt-engine-setup-20141028004447-izvbnu.log
+[ INFO  ] Generating answer file '/var/lib/ovirt-engine/setup/answers/20141028021610-setup.conf'
+[ INFO  ] Stage: Pre-termination
+[ INFO  ] Stage: Termination
+[ INFO  ] Execution of setup completed successfully
+</code></pre>
+<li> </li>
+</ol>
+<hr>
+</section>
 
 <!--[if !IE]><script>fixScale(document);</script><![endif]-->
 <{{ page.date | date_to_string }}>
