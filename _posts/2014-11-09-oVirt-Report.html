@@ -3,38 +3,133 @@ layout: none
 title: oVirtä¹‹Report
 ---
 <h2>{{ page.title }}</h2>
-    <div class="wrapper">
-      <section>
-      <div id="title">
-        <h1>oVirt-OptaPlanner</h1>
-        <hr>
-        <span class="credits left">Project maintained by <a href="https://github.com/yingyun001">yingyun001</a></span>
-      </div>
-      <h1><a name="%E9%83%A8%E7%BD%B2optaplanner" class="anchor" href="#%E9%83%A8%E7%BD%B2optaplanner"><span class="octicon octicon-link"></span></a>éƒ¨ç½²OptaPlanner</h1>
-      <h2><a name="%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83" class="anchor" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="octicon octicon-link"></span></a>æµ‹è¯•ç¯å¢ƒï¼š</h2>
-      <ol>
-        <li>æ“ä½œç³»ç»Ÿï¼šCentOS6.5</li>
-        <li>oVirt ç‰ˆæœ¬ï¼š 3.5</li>
-        <li>å‡†å¤‡ä¸¤å°ä¸»æœº(è™šæ‹Ÿæœºäº¦å¯)ï¼›</li>
-        <ul>
-          <li>vm_266 ä½œ ovirt-engine</li>
-          <li>vm_247 ä½œ ovirt-optimizeræœåŠ¡ã€‚</li>
-        </ul>
-      </ol>
-      <h2><a name="%E6%B5%8B%E8%AF%95" class="anchor" href="#%E6%B5%8B%E8%AF%95"><span class="octicon octicon-link"></span></a>æµ‹è¯•ï¼š</h2>
-      <h3><a name="vm_226" class="anchor" href="#vm_226"><span class="octicon octicon-link"></span></a>vm_226:</h3>
-      <ol>
-        <li>å®‰è£…æ“ä½œç³»ç»Ÿåï¼Œè¿›å…¥ç³»ç»Ÿç¬¬ä¸€ä»¶è¦åšçš„äº‹å°±æ˜¯å°†æ‰€æœ‰è½¯ä»¶åŒ…å‡çº§åˆ°æœ€æ–°ï¼Œæ‰§è¡Œä¸‹é¢çš„å‘½ä»¤ï¼š</li>
-        <pre><code>yum -y update</code></pre>
-å‡çº§æˆåŠŸåï¼Œé‡å¯ç³»ç»Ÿ
-        <li>é…ç½®oVirt3.5çš„yumæº</li>
-        <code><pre>yum -y install [http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm](http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm)</pre></code>
-å®‰è£…oVirt engine
-        <pre><code>yum -y install ovirt-engine</code></pre>
-æ­¤å‘½ä»¤å°†ä¸‹è½½oVirt engine å®‰è£…è½¯ä»¶åŒ…ï¼Œå¹¶è§£å†³æ‰€æœ‰çš„ä¾èµ–å…³ç³»ã€‚
-      </ol>
-      </section>
-    </div>
+<section id="main_content">
+    <h1>
+       <a name="%E6%B5%8B%E8%AF%95%E4%B8%80" class="anchor" href="#%E6%B5%8B%E8%AF%95%E4%B8%80"><span class="octicon octicon-link"></span></a>²âÊÔÒ»£º
+    </h1>
+    <h2>
+       <a name="%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83" class="anchor" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="octicon octicon-link"></span></a>²âÊÔ»·¾³£º
+    </h2>
+    <div>Version : 3.5</div>
+    <p>Engine£¬dwh£¬reports ·Ö±ğÔÚ²»Í¬µÄ»úÆ÷ÉÏ:</p>
+    <ul>
+       <li>vm_187 : ×öengine»úÆ÷</li>
+       <li>vm_188 : ×ödwh»úÆ÷</li>
+       <li>vm_189 : ×öreports»úÆ÷</li>
+    </ul>
+
+    <h2>
+       <a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="octicon octicon-link"></span></a>¾ßÌå²Ù×÷£º
+    </h2>
+
+    <h3>
+       <a name="vm_187-" class="anchor" href="#vm_187-"><span class="octicon octicon-link"></span></a>vm_187 :
+    </h3>
+    <pre>
+       <code>
+          Host name : zhangyingyun187.eayunci
+       </code>
+    </pre>
+    <ol>
+       <li>yum -y update </li>
+       <li>yum -y install ????????</li>
+       <li>yum -y ovirt-engine</li>
+       <li>engine-setup</li>
+    </ol>
+    <h3>
+       <a name="vm_188-" class="anchor" href="#vm_188-"><span class="octicon octicon-link"></span></a>vm_188 :
+    </h3>
+    <pre>
+       <code>
+          Host name : zhangyingyun188.eayunci
+       </code>
+    </pre>
+    <ol>
+       <li>yum -y update </li>
+       <li>
+          yum -y install<a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a>
+       </li>
+       <li>yum -y ovirt-engine-dwh</li>
+       <li>engine-setup</li>
+       <li>ÓÉÓÚĞèÒªÊÖ¶¯»ñÈ¡µ½engineÊı¾İ¿âµÄÃÜÂë£¬ËùÒÔÒªÊÂÏÈÔÚ /etc/hostsÖĞ£¬²»µ«ÒªÅäÖÃ±¾»úµÄÓòÃû»¹ÒªÅäÖÃzhangyingyun187.eayunciµÄÓòÃû½âÎö¡£</li>
+       <li> </li>
+    </ol>
+    <h3>
+       <a name="vm_189-" class="anchor" href="#vm_189-"><span class="octicon octicon-link"></span></a>vm_189 : 
+    </h3>
+    <pre> 
+       <code>
+          Host name : zhangyingyun189.eayunci
+       </code>
+    </pre>
+    <ol>
+       <li>yum -y update </li>
+       <li>yum -y install
+          <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a>
+       </li>
+       <li>yum -y ovirt-engine-reports</li>
+       <li>engine-setup</li>
+       <li>ÓÉÓÚĞèÒªÊÖ¶¯»ñÈ¡µ½dwhÊı¾İ¿âµÄÃÜÂë£¬ËùÒÔÒªÊÂÏÈÔÚ /etc/hostsÖĞ£¬²»µ«ÒªÅäÖÃ±¾»úµÄÓòÃû»¹ÒªÅäÖÃzhangyingyun188.eayunciµÄÓòÃû½âÎö¡£</li>
+    </ol>
+    <hr>
+    <h1>
+       <a name="%E6%B5%8B%E8%AF%95%E4%BA%8C" class="anchor" href="#%E6%B5%8B%E8%AF%95%E4%BA%8C"><span class="octicon octicon-link"></span></a>²âÊÔ¶ş£º
+    </h1>
+    <h2>
+       <a name="%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83-1" class="anchor" href="#%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83-1"><span class="octicon octicon-link"></span></a>²âÊÔ»·¾³£º
+    </h2>
+    <div>Version : 3.5</div>
+    <p>Engine£¬dwhÔÚÍ¬Ò»Ì¨»úÆ÷ÉÏ£»reportsÔÚµ¥¶ÀµÄ»úÆ÷ÉÏ:</p>
+    <ul>
+       <li>vm_166£º×öengine &amp; dwh»úÆ÷</li>
+       <li>vm_167£º×öreports»úÆ÷</li>
+    </ul>
+
+    <h2>
+       <a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1"><span class="octicon octicon-link"></span></a>¾ßÌå²Ù×÷£º
+    </h2>
+
+    <h3>
+       <a name="vm_166-" class="anchor" href="#vm_166-"><span class="octicon octicon-link"></span></a>vm_166 :
+    </h3>
+
+    <pre>
+       <code>
+          Host name : zhangyingyun166.eayunci
+       </code>
+    </pre>
+
+    <ol>
+       <li>yum -y update </li>
+       <li>yum -y install ????????</li>
+       <li>yum -y ovirt-engine</li>
+       <li>yum -y ovirt-engine-dwh</li>
+       <li>engine-setup</li>
+    </ol>
+
+    <h3>
+       <a name="vm_167-" class="anchor" href="#vm_167-"><span class="octicon octicon-link"></span></a>vm_167 :
+    </h3>
+
+    <pre>
+       <code>
+          Host name : zhangyingyun167.eayunci
+       </code>
+    </pre>
+
+    <ol>
+       <li>yum -y update</li>
+       <li>yum -y install
+          <a href="http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm">http://resources.ovirt.org/pub/yum-repo/ovirt-release35.rpm</a>
+       </li>
+       <li>yum -y ovirt-engine-reports</li>
+       <li>ÓÉÓÚĞèÒªÊÖ¶¯»ñÈ¡µ½engine &amp; dwhÊı¾İ¿âµÄÃÜÂë£¬ËùÒÔÒªÊÂÏÈÔÚ /etc/hostsÖĞ£¬²»µ«ÒªÅäÖÃ±¾»úµÄÓòÃû»¹ÒªÅäÖÃzhangyingyun166.eayunciµÄÓòÃû½âÎö¡£</li>
+       <li>engine-setup</li>
+       <li> </li>
+    </ol>
+    <hr>
+    </section>
+
 <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    <{{ page.date | date_to_string }}
+<{{ page.date | date_to_string }}>
 
