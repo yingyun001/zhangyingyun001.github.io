@@ -22,7 +22,7 @@ title: oVirt Report
 <a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C"><span class="octicon octicon-link"></span></a>具体操作：</h2>
 <h3>
 <a name="vm_187-" class="anchor" href="#vm_187-"><span class="octicon octicon-link"></span></a>vm_187 :</h3>
-<div>&nbsp;&nbsp;Host name : zhangyingyun187.eayunci</div>
+<div>&nbsp;&nbsp;Host name : zhangyingyun187.ovirt</div>
 <ol>
 <li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
 <pre><code>yum -y update</code></pre>
@@ -69,8 +69,8 @@ title: oVirt Report
 [ ERROR ] Invalid value
           Firewall manager to configure (iptables): iptables
 [ INFO  ] iptables will be configured as firewall manager.
-          Host fully qualified DNS name of this server [zhangyingyun187.eayunci]: 
-[WARNING] Failed to resolve zhangyingyun187.eayunci using DNS, it can be resolved only locally
+          Host fully qualified DNS name of this server [zhangyingyun187.ovirt]: 
+[WARNING] Failed to resolve zhangyingyun187.ovirt using DNS, it can be resolved only locally
          
           --== DATABASE CONFIGURATION ==--
          
@@ -88,7 +88,7 @@ title: oVirt Report
          
           --== PKI CONFIGURATION ==--
          
-          Organization name for certificate [eayunci]: 
+          Organization name for certificate [ovirt]: 
          
           --== APACHE CONFIGURATION ==--
          
@@ -101,7 +101,7 @@ title: oVirt Report
          
           Configure an NFS share on this server to be used as an ISO Domain? (Yes, No) [Yes]: 
           Local ISO domain path [/var/lib/exports/iso-20141021070607]: 
-          Local ISO domain ACL - note that the default will restrict access to zhangyingyun187.eayunci only, for security reasons [zhangyingyun187.eayunci(rw)]: 
+          Local ISO domain ACL - note that the default will restrict access to zhangyingyun187.ovirt only, for security reasons [zhangyingyun187.ovirt(rw)]: 
           Local ISO domain name [ISO_DOMAIN]: 
          
           --== MISC CONFIGURATION ==--
@@ -117,7 +117,7 @@ title: oVirt Report
           Application mode                        : both
           Firewall manager                        : iptables
           Update Firewall                         : True
-          Host FQDN                               : zhangyingyun187.eayunci
+          Host FQDN                               : zhangyingyun187.ovirt
           Engine database name                    : engine
           Engine database secured connection      : False
           Engine database host                    : localhost
@@ -126,9 +126,9 @@ title: oVirt Report
           Engine database port                    : 5432
           Engine installation                     : True
           NFS setup                               : True
-          PKI organization                        : eayunci
+          PKI organization                        : ovirt
           NFS mount point                         : /var/lib/exports/iso-20141021070607
-          NFS export ACL                          : zhangyingyun187.eayunci(rw)
+          NFS export ACL                          : zhangyingyun187.ovirt(rw)
           Configure local Engine database         : True
           Set application as default page         : True
           Configure Apache SSL                    : True
@@ -157,8 +157,8 @@ title: oVirt Report
           SSH fingerprint: 9D:73:AC:27:5F:9E:F6:2F:71:71:1D:96:CE:75:25:49
           Internal CA D9:CB:EE:22:04:73:51:5F:54:DD:CD:4B:4B:3C:43:C9:2F:40:36:61
           Web access is enabled at:
-              http://zhangyingyun187.eayunci:80/ovirt-engine
-              https://zhangyingyun187.eayunci:443/ovirt-engine
+              http://zhangyingyun187.ovirt:80/ovirt-engine
+              https://zhangyingyun187.ovirt:443/ovirt-engine
           Please use the user "admin" and password specified in order to login
          
           --== END OF SUMMARY ==--
@@ -187,7 +187,7 @@ ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB
 </ol>
 <h3>
 <a name="vm_188-" class="anchor" href="#vm_188-"><span class="octicon octicon-link"></span></a>vm_188 :</h3>
-<div>&nbsp;&nbsp;Host name : zhangyingyun188.eayunci</div>
+<div>&nbsp;&nbsp;Host name : zhangyingyun188.ovirt</div>
 <ol>
 <li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
 <pre><code>yum -y update</code></pre>
@@ -227,15 +227,15 @@ ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB
           Note: automatic configuration of the firewall may overwrite current settings.
           Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
 [ INFO  ] iptables will be configured as firewall manager.
-          Host fully qualified DNS name of this server [zhangyingyun188.eayunci]: 
-[WARNING] Failed to resolve zhangyingyun188.eayunci using DNS, it can be resolved only locally
+          Host fully qualified DNS name of this server [zhangyingyun188.ovirt]: 
+[WARNING] Failed to resolve zhangyingyun188.ovirt using DNS, it can be resolved only locally
          
           --== DATABASE CONFIGURATION ==--
          
           Where is the DWH database located? (Local, Remote) [Local]: 
           Setup can configure the local postgresql server automatically for the DWH to run. This may conflict with existing applications.
           Would you like Setup to automatically configure postgresql and create DWH database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
-          Engine database host []: zhangyingyun187.eayunci
+          Engine database host []: zhangyingyun187.ovirt
           Engine database port [5432]: 
           Engine database secured connection (Yes, No) [No]: 
           Engine database name [engine]: 
@@ -265,7 +265,7 @@ ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB
          
           Firewall manager                        : iptables
           Update Firewall                         : True
-          Host FQDN                               : zhangyingyun188.eayunci
+          Host FQDN                               : zhangyingyun188.ovirt
           DWH installation                        : True
           DWH database name                       : ovirt_engine_history
           DWH database secured connection         : False
@@ -276,7 +276,7 @@ ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB
           Configure local DWH database            : True
           Engine database name                    : engine
           Engine database secured connection      : False
-          Engine database host                    : zhangyingyun187.eayunci
+          Engine database host                    : zhangyingyun187.ovirt
           Engine database user name               : engine
           Engine database host name validation    : False
           Engine database port                    : 5432
@@ -309,7 +309,7 @@ ENGINE_DB_URL="jdbc:postgresql://${ENGINE_DB_HOST}:${ENGINE_DB_PORT}/${ENGINE_DB
 [ INFO  ] Execution of setup completed successfully
 </code></pre>
 <li><a name="EngineDWHconf">查看 DWH 数据库的配置文件（位置在/etc/ovirt-engine-dwh/engine-dwhd.conf.d/10-setup-datebase.conf）</a></li>
-<pre><code>ENGINE_DB_HOST="zhangyingyun187.eayunci"
+<pre><code>ENGINE_DB_HOST="zhangyingyun187.ovirt"
 ENGINE_DB_PORT="5432"
 ENGINE_DB_USER="engine"
 ENGINE_DB_PASSWORD="JMZXFAFY1f0iZw3Bs2POh6"
@@ -331,7 +331,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
 </ol>
 <h3>
 <a name="vm_189-" class="anchor" href="#vm_189-"><span class="octicon octicon-link"></span></a>vm_189 :</h3>
-<div>&nbsp;&nbsp;Host name : zhangyingyun189.eayunci</div>
+<div>&nbsp;&nbsp;Host name : zhangyingyun189.ovirt</div>
 <ol>
 <li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
 <pre><code>yum -y update</code></pre>
@@ -343,7 +343,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
 此命令将下载oVirt engine reports安装软件包，并解决所有的依赖关系。
 <li>配置oVirt engine</li>
 <pre><code>engine-setup</code></pre>
-<li>由于需要手动获取到dwh数据库的密码，所以要事先在 /etc/hosts中，不但要配置本机的域名还要配置zhangyingyun188.eayunci的域名解析。</li>
+<li>由于需要手动获取到dwh数据库的密码，所以要事先在 /etc/hosts中，不但要配置本机的域名还要配置zhangyingyun188.ovirt的域名解析。</li>
 <pre><code>root@zhangyingyun189 network-scripts]# engine-setup
 [ INFO  ] Stage: Initializing
 [ INFO  ] Stage: Environment setup
@@ -372,17 +372,17 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           Note: automatic configuration of the firewall may overwrite current settings.
           Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
 [ INFO  ] iptables will be configured as firewall manager.
-          Host fully qualified DNS name of this server [zhangyingyun189.eayunci]: 
-[WARNING] Failed to resolve zhangyingyun189.eayunci using DNS, it can be resolved only locally
-          Host fully qualified DNS name of the engine server []: zhangyingyun187.eayunci
-[WARNING] Failed to resolve zhangyingyun187.eayunci using DNS, it can be resolved only locally
+          Host fully qualified DNS name of this server [zhangyingyun189.ovirt]: 
+[WARNING] Failed to resolve zhangyingyun189.ovirt using DNS, it can be resolved only locally
+          Host fully qualified DNS name of the engine server []: zhangyingyun187.ovirt
+[WARNING] Failed to resolve zhangyingyun187.ovirt using DNS, it can be resolved only locally
          
           --== DATABASE CONFIGURATION ==--
          
           Where is the Reports database located? (Local, Remote) [Local]: 
           Setup can configure the local postgresql server automatically for the Reports to run. This may conflict with existing applications.
           Would you like Setup to automatically configure postgresql and create Reports database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
-          DWH database host []: zhangyingyun188.eayunci
+          DWH database host []: zhangyingyun188.ovirt
           DWH database port [5432]: 
           DWH database secured connection (Yes, No) [No]: 
           DWH database name [ovirt_engine_history]: 
@@ -400,7 +400,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           2 - Perform each action manually, use files to copy content around
           (1, 2) [1]: 
           ssh port on remote engine server [22]: 
-          root password on remote engine server zhangyingyun187.eayunci: 
+          root password on remote engine server zhangyingyun187.ovirt: 
 [ INFO  ] Signing the Reports certificate on the engine server
 [ INFO  ] Reports certificate signed successfully
 [ INFO  ] Signing the Apache certificate on the engine server
@@ -429,7 +429,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
          
           Firewall manager                        : iptables
           Update Firewall                         : True
-          Host FQDN                               : zhangyingyun189.eayunci
+          Host FQDN                               : zhangyingyun189.ovirt
           Configure Apache SSL                    : True
           Reports installation                    : True
           Reports database name                   : ovirt_engine_reports
@@ -441,11 +441,11 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           Configure local Reports database        : True
           DWH database name                       : ovirt_engine_history
           DWH database secured connection         : False
-          DWH database host                       : zhangyingyun188.eayunci
+          DWH database host                       : zhangyingyun188.ovirt
           DWH database user name                  : ovirt_engine_history
           DWH database host name validation       : False
           DWH database port                       : 5432
-          Engine Host FQDN                        : zhangyingyun187.eayunci
+          Engine Host FQDN                        : zhangyingyun187.ovirt
          
           Please confirm installation settings (OK, Cancel) [OK]: 
 [ INFO  ] Stage: Transaction setup
@@ -497,7 +497,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
 <a name="%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1" class="anchor" href="#%E5%85%B7%E4%BD%93%E6%93%8D%E4%BD%9C-1"><span class="octicon octicon-link"></span></a>具体操作：</h2>
 <h3>
 <a name="vm_166-" class="anchor" href="#vm_166-"><span class="octicon octicon-link"></span></a>vm_166 :</h3>
-<div>Host name : zhangyingyun166.eayunci</div>
+<div>Host name : zhangyingyun166.ovirt</div>
 <ol>
 <li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
 <pre><code>yum -y update</code></pre>
@@ -542,8 +542,8 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           Note: automatic configuration of the firewall may overwrite current settings.
           Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
 [ INFO  ] iptables will be configured as firewall manager.
-          Host fully qualified DNS name of this server [zhangyingyun166.eayunci]: 
-[WARNING] Failed to resolve zhangyingyun166.eayunci using DNS, it can be resolved only locally
+          Host fully qualified DNS name of this server [zhangyingyun166.ovirt]: 
+[WARNING] Failed to resolve zhangyingyun166.ovirt using DNS, it can be resolved only locally
          
           --== DATABASE CONFIGURATION ==--
          
@@ -564,7 +564,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
          
           --== PKI CONFIGURATION ==--
          
-          Organization name for certificate [eayunci]: 
+          Organization name for certificate [ovirt]: 
          
           --== APACHE CONFIGURATION ==--
          
@@ -577,7 +577,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
          
           Configure an NFS share on this server to be used as an ISO Domain? (Yes, No) [Yes]: 
           Local ISO domain path [/var/lib/exports/iso-20141021070249]: 
-          Local ISO domain ACL - note that the default will restrict access to zhangyingyun166.eayunci only, for security reasons [zhangyingyun166.eayunci(rw)]: 
+          Local ISO domain ACL - note that the default will restrict access to zhangyingyun166.ovirt only, for security reasons [zhangyingyun166.ovirt(rw)]: 
           Local ISO domain name [ISO_DOMAIN]: 
          
           --== MISC CONFIGURATION ==--
@@ -593,7 +593,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           Application mode                        : both
           Firewall manager                        : iptables
           Update Firewall                         : True
-          Host FQDN                               : zhangyingyun166.eayunci
+          Host FQDN                               : zhangyingyun166.ovirt
           Engine database name                    : engine
           Engine database secured connection      : False
           Engine database host                    : localhost
@@ -602,9 +602,9 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           Engine database port                    : 5432
           Engine installation                     : True
           NFS setup                               : True
-          PKI organization                        : eayunci
+          PKI organization                        : ovirt
           NFS mount point                         : /var/lib/exports/iso-20141021070249
-          NFS export ACL                          : zhangyingyun166.eayunci(rw)
+          NFS export ACL                          : zhangyingyun166.ovirt(rw)
           Configure local Engine database         : True
           Set application as default page         : True
           Configure Apache SSL                    : True
@@ -645,8 +645,8 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           SSH fingerprint: BA:75:ED:A2:7D:9B:BE:E9:9D:B3:53:82:D5:E1:84:06
           Internal CA 7D:22:8E:5D:55:B9:0C:B5:93:AD:41:EB:42:69:A6:C1:86:85:DF:CD
           Web access is enabled at:
-              http://zhangyingyun166.eayunci:80/ovirt-engine
-              https://zhangyingyun166.eayunci:443/ovirt-engine
+              http://zhangyingyun166.ovirt:80/ovirt-engine
+              https://zhangyingyun166.ovirt:443/ovirt-engine
           Please use the user "admin" and password specified in order to login
          
           --== END OF SUMMARY ==--
@@ -685,7 +685,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
 </ol>
 <h3>
 <a name="vm_167-" class="anchor" href="#vm_167-"><span class="octicon octicon-link"></span></a>vm_167 :</h3>
-<div>Host name : zhangyingyun167.eayunci</div>
+<div>Host name : zhangyingyun167.ovirt</div>
 </code></pre>
 <ol>
 <li>安装操作系统后，进入系统第一件要做的事就是将所有软件包升级到最新，执行下面的命令：</li>
@@ -725,17 +725,17 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           Note: automatic configuration of the firewall may overwrite current settings.
           Do you want Setup to configure the firewall? (Yes, No) [Yes]: 
 [ INFO  ] iptables will be configured as firewall manager.
-          Host fully qualified DNS name of this server [zhangyingyun167.eayunci]: 
-[WARNING] Failed to resolve zhangyingyun167.eayunci using DNS, it can be resolved only locally
-          Host fully qualified DNS name of the engine server []: zhangyingyun166.eayunci
-[WARNING] Failed to resolve zhangyingyun166.eayunci using DNS, it can be resolved only locally
+          Host fully qualified DNS name of this server [zhangyingyun167.ovirt]: 
+[WARNING] Failed to resolve zhangyingyun167.ovirt using DNS, it can be resolved only locally
+          Host fully qualified DNS name of the engine server []: zhangyingyun166.ovirt
+[WARNING] Failed to resolve zhangyingyun166.ovirt using DNS, it can be resolved only locally
          
           --== DATABASE CONFIGURATION ==--
          
           Where is the Reports database located? (Local, Remote) [Local]: 
           Setup can configure the local postgresql server automatically for the Reports to run. This may conflict with existing applications.
           Would you like Setup to automatically configure postgresql and create Reports database, or prefer to perform that manually? (Automatic, Manual) [Automatic]: 
-          DWH database host []: zhangyingyun166.eayunci
+          DWH database host []: zhangyingyun166.ovirt
           DWH database port [5432]: 
           DWH database secured connection (Yes, No) [No]: 
           DWH database name [ovirt_engine_history]: 
@@ -753,7 +753,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           2 - Perform each action manually, use files to copy content around
           (1, 2) [1]: 
           ssh port on remote engine server [22]: 
-          root password on remote engine server zhangyingyun166.eayunci: 
+          root password on remote engine server zhangyingyun166.ovirt: 
 [ INFO  ] Signing the Reports certificate on the engine server
 [ INFO  ] Reports certificate signed successfully
 [ INFO  ] Signing the Apache certificate on the engine server
@@ -782,7 +782,7 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
          
           Firewall manager                        : iptables
           Update Firewall                         : True
-          Host FQDN                               : zhangyingyun167.eayunci
+          Host FQDN                               : zhangyingyun167.ovirt
           Configure Apache SSL                    : True
           Reports installation                    : True
           Reports database name                   : ovirt_engine_reports
@@ -794,11 +794,11 @@ DWH_DB_URL="jdbc:postgresql://${DWH_DB_HOST}:${DWH_DB_PORT}/${DWH_DB_DATABASE}?s
           Configure local Reports database        : True
           DWH database name                       : ovirt_engine_history
           DWH database secured connection         : False
-          DWH database host                       : zhangyingyun166.eayunci
+          DWH database host                       : zhangyingyun166.ovirt
           DWH database user name                  : ovirt_engine_history
           DWH database host name validation       : False
           DWH database port                       : 5432
-          Engine Host FQDN                        : zhangyingyun166.eayunci
+          Engine Host FQDN                        : zhangyingyun166.ovirt
          
           Please confirm installation settings (OK, Cancel) [OK]: 
 [ INFO  ] Stage: Transaction setup
